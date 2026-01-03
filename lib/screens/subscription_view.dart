@@ -122,7 +122,10 @@ class _SubscriptionViewState extends State<SubscriptionView> {
           color: Colors.white,
           borderRadius: BorderRadius.circular(50),
           boxShadow: [
-            BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 30),
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.05),
+              blurRadius: 30,
+            ),
           ],
         ),
         child: Column(
@@ -215,7 +218,10 @@ class _SubscriptionViewState extends State<SubscriptionView> {
           color: Colors.white,
           borderRadius: BorderRadius.circular(50),
           boxShadow: [
-            BoxShadow(color: Colors.black12.withOpacity(0.05), blurRadius: 20),
+            BoxShadow(
+              color: Colors.black12.withValues(alpha: 0.05),
+              blurRadius: 20,
+            ),
           ],
         ),
         child: Column(
@@ -301,7 +307,7 @@ class _SubscriptionViewState extends State<SubscriptionView> {
                 setState(() => _flowIndex = 0);
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.matchaLight.withOpacity(0.3),
+                backgroundColor: AppColors.matchaLight.withValues(alpha: 0.3),
               ),
               child: const Text(
                 "Simulasi Berhasil",
@@ -394,7 +400,10 @@ class _SubscriptionViewState extends State<SubscriptionView> {
         color: Colors.white,
         borderRadius: BorderRadius.circular(25),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 10),
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.03),
+            blurRadius: 10,
+          ),
         ],
       ),
       child: Row(

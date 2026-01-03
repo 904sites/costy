@@ -48,11 +48,11 @@ class RecipesPage extends StatelessWidget {
                 child: Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: AppColors.strawberryDark.withOpacity(0.7),
+                    color: AppColors.strawberryDark.withValues(alpha: 0.7),
                     borderRadius: BorderRadius.circular(12),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.1),
+                        color: Colors.black.withValues(alpha: 0.1),
                         blurRadius: 8,
                         offset: const Offset(0, 4),
                       ),
@@ -99,7 +99,7 @@ class RecipesPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(30),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black.withOpacity(0.04),
+                            color: Colors.black.withValues(alpha: 0.04),
                             blurRadius: 15,
                             offset: const Offset(0, 8),
                           ),
@@ -277,7 +277,7 @@ class RecipesPage extends StatelessWidget {
               "Mulai buat resep pertama!",
               style: GoogleFonts.inter(
                 fontSize: 16,
-                color: AppColors.strawberryDark.withOpacity(0.8),
+                color: AppColors.strawberryDark.withValues(alpha: 0.8),
                 fontWeight: FontWeight.bold,
               ),
             ),

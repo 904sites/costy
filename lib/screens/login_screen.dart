@@ -109,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       borderRadius: BorderRadius.circular(15),
                     ),
                     elevation: 5,
-                    shadowColor: AppColors.matchaDark.withOpacity(0.3),
+                    shadowColor: AppColors.matchaDark.withValues(alpha: 0.3),
                   ),
                   child: const Text(
                     "Masuk Sekarang",
@@ -181,7 +181,7 @@ class _LoginScreenState extends State<LoginScreen> {
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.02),
+            color: Colors.black.withValues(alpha: 0.02),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),

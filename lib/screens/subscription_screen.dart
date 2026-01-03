@@ -17,15 +17,20 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
     {'icon': Icons.description_outlined, 'text': 'Export PDF'},
   ];
 
-  void _handleUpgrade() {
+  void _handleUpgrade() async {
     setState(() => _isLoading = true);
-    Future.delayed(const Duration(milliseconds: 1500), () {
-      DataService.activatePro(30);
+    try {
+      await DataService.buyPro();
+      setState(() => _isLoading = false);
+      _showSuccessDialog();
+    } catch (e) {
       if (mounted) {
         setState(() => _isLoading = false);
-        _showSuccessDialog();
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text("Error: $e")));
       }
-    });
+    }
   }
 
   void _showSuccessDialog() {
@@ -111,7 +116,7 @@ class _SubscriptionScreenState extends State<SubscriptionScreen> {
                         ),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black.withOpacity(0.08),
+                            color: Colors.black.withValues(alpha: 0.08),
                             blurRadius: 30,
                           ),
                         ],

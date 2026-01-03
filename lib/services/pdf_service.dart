@@ -1,6 +1,5 @@
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
-import 'package:printing/printing.dart';
 import 'package:intl/intl.dart';
 import 'data_service.dart';
 
@@ -162,7 +161,7 @@ class PdfService {
             children: [
               pw.Text(
                 "Catatan: Gunakan takaran presisi untuk hasil maksimal.",
-                style: const pw.TextStyle(
+                style: pw.TextStyle(
                   fontSize: 8,
                   fontStyle: pw.FontStyle.italic,
                   color: PdfColors.grey600,
@@ -183,10 +182,10 @@ class PdfService {
     );
 
     // Membuka Jendela Preview Cetak
-    await Printing.layoutPdf(
-      onLayout: (PdfPageFormat format) async => pdf.save(),
-      name: "Laporan_Costy_${recipe.name}",
-    );
+    // await Printing.layoutPdf(
+    //   onLayout: (PdfPageFormat format) async => pdf.save(),
+    //   name: "Laporan_Costy_${recipe.name}",
+    // );
   }
 
   // --- HELPER: CHIP INFORMASI ---
@@ -199,7 +198,7 @@ class PdfService {
       ),
       child: pw.Text(
         text,
-        style: const pw.TextStyle(
+        style: pw.TextStyle(
           color: PdfColors.white,
           fontSize: 10,
           fontWeight: pw.FontWeight.bold,

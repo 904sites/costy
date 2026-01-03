@@ -111,7 +111,7 @@ class HomeScreenState extends State<HomeScreen> {
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.05),
+              color: Colors.black.withValues(alpha: 0.05),
               blurRadius: 10,
               offset: const Offset(0, -2),
             ),
@@ -382,7 +382,7 @@ class HomeBody extends StatelessWidget {
       borderRadius: BorderRadius.circular(22),
       boxShadow: [
         BoxShadow(
-          color: Colors.black.withOpacity(0.04),
+          color: Colors.black.withValues(alpha: 0.04),
           blurRadius: 10,
           offset: const Offset(0, 4),
         ),
@@ -456,7 +456,7 @@ class HomeBody extends StatelessWidget {
     width: double.infinity,
     padding: const EdgeInsets.all(40),
     decoration: BoxDecoration(
-      color: Colors.white.withOpacity(0.5),
+      color: Colors.white.withValues(alpha: 0.5),
       borderRadius: BorderRadius.circular(25),
       border: Border.all(color: Colors.black12, style: BorderStyle.solid),
     ),

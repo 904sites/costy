@@ -116,6 +116,12 @@ class DataService {
       String email = p.getString('current_session_email') ?? "";
       if (email.isNotEmpty) await loadUserData(email);
     }
+
+    // // Inisialisasi IAP
+    // final bool available = await InAppPurchase.instance.isAvailable();
+    // if (available) {
+    //   InAppPurchase.instance.purchaseStream.listen(_listenToPurchaseUpdated);
+    // }
   }
 
   // --- 2. LOAD DATA USER ---
@@ -244,6 +250,13 @@ class DataService {
   static void activatePro(int d) {
     isPro.value = true;
     _persist();
+  }
+
+  static Future<void> buyPro() async {
+    // Simulate purchase process
+    await Future.delayed(const Duration(seconds: 1));
+    isPro.value = true;
+    await _persist();
   }
 
   static void updateStock(String id, double change) {
